@@ -108,5 +108,8 @@ def download_file(url, localName, headers={}):
         i+=(len(chunk)/chunksize)
     f.close()
     return
-url = 'http://dl5.jiocloud.link/Movies/Taylor.Swift.Miss.Americana.2020.720p.NF.WEB-DL.x264-KatmovieHD.nl.mkv'
+url = 'http://9092.ultratv100.com:9090/movies/Batch219/The%20Amazing%20Spider%20Man%202%20%282014%29/The%20Amazing%20Spider%20Man%202%20%282014%29.mp4'
 download_file("http://www.xiaoguo.net/~books/Program/You_Dont_Know_JS_Up_and_Going.pdf", 'ydkjs.pdf')
+
+(488974648, 733461971)
+(733461972, 977949299)
