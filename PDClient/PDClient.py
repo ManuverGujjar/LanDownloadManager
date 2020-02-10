@@ -45,8 +45,11 @@ class PDClient():
             self.socket.send(f'1\n{len(data)}\r'.encode())
             self.socket.send(data)
 
+
+from Info import PORT, IP
+
 if __name__ == '__main__':
-    pdClient = PDClient(PORT=5555)
+    pdClient = PDClient(PORT=PORT, IP=IP)
     start, end, url = pdClient.reciveDownloadRequest()
     downloadFile(url, f'{start}', headers={'Range' : f'bytes={start}-{end}'})
     # inp = input("Send File Now ? y/n : ")
