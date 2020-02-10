@@ -14,6 +14,7 @@ class PartGenerator():
 
     def fetchFileSize(self, url):
         r = requests.get(url, stream=True)
+        print(r.headers)
         return int(r.headers['Content-Length'])
 
     def generateParts(self):
@@ -96,7 +97,7 @@ class PDServer():
         self.logFile.close()
         self.socket.close()
 if __name__ == '__main__':
-    fileDownloadUrl = 'http://dl176.zlibcdn.com/dtoken/be626fe13dfe585329ef41974856527d'
+    fileDownloadUrl = 'https://firebasestorage.googleapis.com/v0/b/filmygod-80d7f.appspot.com/o/Hollywood%2F2019%2Fspideeman%2FDownload%20From%20FilmyGod.in%20-%20Spider-Man.Far.From.Home.2019.720p.BrRip.Hin-Eng.x265.mkv?alt=media&token=f5be3833-2d3f-45d5-9b31-012745b5567e'
     server = PDServer(fileDownloadUrl, PORT=5555)
     try:
         print("[+] Waiting for clients to connect....")
